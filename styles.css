@@ -251,6 +251,52 @@ header > svg:last-child {
   line-height: 20px;
 }
 
+.countAdownContainer {
+  padding: 38px;
+  text-align: center;
+  background: var(--foundation-secondary-s-600, #38ccb3);
+}
+
+.countAdownContainer > h5 {
+  color: #fff;
+  font-family: Archivo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 2rem;
+}
+
+.countdown > div {
+  color: #fff;
+  font-family: Archivo;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100px;
+}
+
+.countdown > div > h2 {
+  margin: 0;
+}
+
+.countdown > div > p:nth-child(2) {
+  color: #fff;
+  text-align: center;
+  font-family: Archivo;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
 @media screen and (max-width: 1023px) {
   header {
     height: 49px;
@@ -351,6 +397,34 @@ header > svg:last-child {
   }
 
   .programmesInIseOptions > div > ul {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .countAdownContainer {
+    padding: 51 25px;
+  }
+
+  .countAdownContainer > h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .countdown {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .countdown > div {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .countdown > div > h2 {
+    margin: 0;
+  }
+
+  .countdown > div > p:nth-child(2) {
     font-size: 14px;
     line-height: 23px;
   }
