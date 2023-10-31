@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Archivo", sans-serif;
+  position: relative;
+}
+
+button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 96px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+}
+
+header > div:nth-child(1),
+header > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+header > div:nth-child(1) > a {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px;
+  text-decoration: none;
+}
+
+header > div:nth-child(1) > button {
+  background: var(--foundation-primary-p-700, #664efe);
+}
+
+header > svg:last-child {
+  display: none;
+}
+
+.heroSection {
+  height: calc(100vh - 90px);
+  background: url("./assets/heroSectionImage.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.filterOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 6, 145, 0) 10.27%,
+    rgba(74, 52, 215, 0.64) 50.52%,
+    #664efe 85.98%
+  );
+  z-index: 0;
+}
+
+.heroSectionMain {
+  z-index: 1;
+  width: 80%;
+  text-align: center;
+}
+
+.heroSectionMain > button {
+  background: var(--foundation-secondary-s-700, #2ba792);
+}
+
+.heroSectionMain > h4 {
+  color: #fff;
+  text-align: center;
+  font-family: Archivo;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100px;
+}
+
+@media screen and (max-width: 1023px) {
+  header {
+    height: 49px;
+    padding: 0 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  header > div:nth-child(1),
+  header > div:nth-child(3) {
+    display: none;
+  }
+
+  header > svg:last-child {
+    display: block;
+  }
+
+  .heroSectionMain > h4 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .heroSection {
+    height: auto;
+    padding: 90px 2rem;
+  }
+}
