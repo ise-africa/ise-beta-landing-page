@@ -29,6 +29,7 @@ header {
   background: #fff;
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 header > div:nth-child(1),
@@ -104,6 +105,80 @@ header > svg:last-child {
   line-height: 100px;
 }
 
+.whyYouShouldContainer {
+  padding: 2rem 96px;
+}
+
+.whyYouShouldContainer > h1 {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90px;
+}
+
+.whyYouShouldOptions {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.whyYouShouldOptions > div:nth-child(even) {
+  margin-top: 200px;
+}
+
+.whyYouShouldOptions > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 49px;
+  flex-basis: 48%;
+}
+
+.whyYouShouldOptions > div > div:nth-child(1) {
+  width: 162px;
+  height: 162px;
+  background: var(--foundation-primary-p-100, #f7f5ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foundation-primary-p-700, #664efe);
+  font-family: Archivo;
+  font-size: 128px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 36px;
+  border-radius: 50%;
+}
+
+.whyYouShouldOptions > div > div:nth-child(2) {
+  flex: 1;
+}
+
+.whyYouShouldOptions > div > div:nth-child(2) > img {
+  width: 100px;
+  height: 100px;
+}
+
+.whyYouShouldOptions > div > div:nth-child(2) > h4 {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.whyYouShouldOptions > div > div:nth-child(2) > p {
+  color: var(--foundation-grey-g-500, #737373);
+  font-family: Archivo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
 @media screen and (max-width: 1023px) {
   header {
     height: 49px;
@@ -132,5 +207,53 @@ header > svg:last-child {
   .heroSection {
     height: auto;
     padding: 90px 2rem;
+  }
+
+  .whyYouShouldContainer {
+    padding: 80px 16px;
+  }
+
+  .whyYouShouldContainer > h1 {
+    font-size: 31px;
+    line-height: 40px;
+  }
+
+  .whyYouShouldOptions {
+    gap: 40px;
+  }
+
+  .whyYouShouldOptions > div:nth-child(even) {
+    margin-top: 0px;
+  }
+
+  .whyYouShouldOptions > div {
+    gap: 21px;
+    flex-basis: 100%;
+  }
+
+  .whyYouShouldOptions > div > div:nth-child(1) {
+    width: 69px;
+    height: 69px;
+    font-size: 40px;
+    line-height: 36px;
+  }
+
+  .whyYouShouldOptions > div > div:nth-child(2) {
+    flex: 1;
+  }
+
+  .whyYouShouldOptions > div > div:nth-child(2) > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .whyYouShouldOptions > div > div:nth-child(2) > h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .whyYouShouldOptions > div > div:nth-child(2) > p {
+    font-size: 16px;
+    line-height: 25px;
   }
 }
