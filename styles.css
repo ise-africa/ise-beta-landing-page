@@ -133,7 +133,7 @@ header > svg:last-child {
   display: flex;
   align-items: flex-start;
   gap: 49px;
-  flex-basis: 48%;
+  flex-basis: 45%;
 }
 
 .whyYouShouldOptions > div > div:nth-child(1) {
@@ -177,6 +177,78 @@ header > svg:last-child {
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
+}
+
+.programmesInIse {
+  padding: 85px 96px;
+  background: var(--foundation-primary-p-10, #fbfaff);
+}
+
+.programmesInIse > h4 {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+.programmesInIseOptions {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.programmesInIseOptions::-webkit-scrollbar {
+  display: none;
+}
+
+.programmesInIseOptions {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.programmesInIseOptions > div:nth-child(odd) {
+  background: var(--foundation-primary-p-700, #664efe);
+}
+
+.programmesInIseOptions > div:nth-child(even) {
+  background: var(--foundation-secondary-s-500, #61d6c2);
+  transform: rotate(-4.36deg);
+}
+
+.programmesInIseOptions > div {
+  width: 408px;
+  height: 345px;
+  padding: 66px 49px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-basis: 408px;
+}
+
+.programmesInIseOptions > div > img {
+  width: 80px;
+  height: 80px;
+}
+
+.programmesInIseOptions > div > p {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.programmesInIseOptions > div > ul {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -238,10 +310,6 @@ header > svg:last-child {
     line-height: 36px;
   }
 
-  .whyYouShouldOptions > div > div:nth-child(2) {
-    flex: 1;
-  }
-
   .whyYouShouldOptions > div > div:nth-child(2) > img {
     width: 80px;
     height: 80px;
@@ -255,5 +323,35 @@ header > svg:last-child {
   .whyYouShouldOptions > div > div:nth-child(2) > p {
     font-size: 16px;
     line-height: 25px;
+  }
+
+  .programmesInIse {
+    padding: 71px 16px;
+  }
+
+  .programmesInIse > h4 {
+    font-size: 31px;
+    line-height: 40px;
+  }
+
+  .programmesInIseOptions > div {
+    width: 303px;
+    height: 261px;
+    padding: 38px 31px;
+  }
+
+  .programmesInIseOptions > div > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .programmesInIseOptions > div > p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .programmesInIseOptions > div > ul {
+    font-size: 14px;
+    line-height: 23px;
   }
 }

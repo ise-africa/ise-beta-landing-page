@@ -39,16 +39,37 @@ const programmes = [
     title: "School of Cloud",
     options: [
       "AWS Security",
-      "Devops Cloud Engineering, DevSecOps Cloud Engineering",
+      "Devops Cloud Engineering",
+      "DevSecOps Cloud Engineering",
     ],
+  },
+  {
+    image: "./assets/school3.svg",
+    title: "School of Business",
+    options: [
+      "Customer Success Management",
+      "Project Management",
+      "Talent Acquisition",
+    ],
+  },
+  {
+    image: "./assets/school4.svg",
+    title: "School of Info. Technology",
+    options: [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Microsoft 365 Technical Support",
+    ],
+  },
+  {
+    image: "./assets/school5.svg",
+    title: "School of Data",
+    options: ["Data Analysis", "Data Science"],
   },
 ];
 
-let mappedItems = "";
-let proprammesContainer = "";
-
-whyYouShould.map((data, i) => {
-  mappedItems += `<div>
+const mappedItems = whyYouShould.map((data, i) => {
+  return `<div>
   <div>${i + 1}</div>
   <div>
   <img src=${data.image} />
@@ -58,14 +79,16 @@ whyYouShould.map((data, i) => {
   </div>`;
 });
 
-programmes.map((data) => {
-  proprammesContainer += `<div>
-    <img  src=${data.image}/>
+const proprammesContainer = programmes.map((data) => {
+  return `<div>
+    <img src=${data.image} />
     <p>${data.title}</p>
     <ul>
-    ${data.options.map((datum) => {
-      return `<li>${datum}</li>`;
-    })}
+    ${data.options
+      .map((datum) => {
+        return `<li>${datum}</li>`;
+      })
+      .join("")}
     </ul>
     </div>`;
 });
