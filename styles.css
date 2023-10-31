@@ -52,12 +52,50 @@ header > div:nth-child(1) > a {
   text-decoration: none;
 }
 
-header > div:nth-child(1) > button {
+header > div:nth-child(1) > button,
+.sideNavInner > button {
   background: var(--foundation-primary-p-700, #664efe);
 }
 
-header > svg:last-child {
+header > svg:nth-child(4) {
   display: none;
+}
+
+.sideNav {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.sideNavInner {
+  padding: 1.5rem 3rem;
+}
+
+.close {
+  text-align: right;
+}
+
+.sideNavInner > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  transition: all 0.3s ease-in-out;
+  color: #2e2e2e;
 }
 
 .heroSection {
@@ -364,6 +402,65 @@ header > svg:last-child {
   width: 100%;
 }
 
+footer {
+  border: 3px solid green;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 88px 98px;
+  background: var(--foundation-primary-p-700, #664efe);
+  gap: 50px;
+}
+
+footer > div:nth-child(1) {
+  flex-basis: 30%;
+}
+
+footer > div:nth-child(1) > img {
+  width: 53px;
+  height: 50px;
+}
+
+footer > div:nth-child(1) > p {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+footer > div:not(footer > div:nth-child(1)) {
+  flex: 1;
+}
+
+footer > div:not(footer > div:nth-child(1)) > h4 {
+  color: #fff;
+  font-family: Archivo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+footer > div:not(footer > div:nth-child(1)) > a {
+  color: #fff;
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  display: block;
+  text-decoration: none;
+}
+
+footer > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 @media screen and (max-width: 1023px) {
   header {
     height: 49px;
@@ -380,7 +477,7 @@ header > svg:last-child {
     display: none;
   }
 
-  header > svg:last-child {
+  header > svg:nth-child(4) {
     display: block;
   }
 
@@ -532,5 +629,43 @@ header > svg:last-child {
 
   .subscribeButtonSection {
     width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 40px 16px;
+    gap: 24px;
+  }
+
+  footer > div:nth-child(1) {
+    flex-basis: 100%;
+  }
+
+  footer > div:nth-child(1) > img {
+    width: 53px;
+    height: 50px;
+  }
+
+  footer > div:nth-child(1) > p {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  footer > div:not(footer > div:nth-child(1)) {
+    flex: 1;
+  }
+
+  footer > div:not(footer > div:nth-child(1)) > h4 {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  footer > div:not(footer > div:nth-child(1)) > a {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  footer > div:last-child {
+    gap: 24px;
   }
 }

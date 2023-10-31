@@ -96,3 +96,13 @@ const proprammesContainer = programmes.map((data) => {
 document.querySelector(".whyYouShouldOptions").innerHTML = mappedItems;
 document.querySelector(".programmesInIseOptions").innerHTML =
   proprammesContainer;
+
+const sideNav = document.querySelector(".sideNav");
+
+const openSideNav = () => {
+  sideNav.style.width = "100%";
+};
+
+const closeSideNav = () => {
+  sideNav.style.width = "0%";
+};
