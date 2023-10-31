@@ -71,7 +71,6 @@ header > svg:nth-child(4) {
   overflow: hidden;
   width: 0%;
   transition: 0.3s;
-  height: 100%;
 }
 
 .sideNavInner {
