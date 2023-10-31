@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -297,6 +300,70 @@ header > svg:last-child {
   line-height: 30px;
 }
 
+.subscribeSection {
+  text-align: center;
+  padding: 147px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.subscribeSection > h4 {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  text-align: center;
+  font-family: Archivo;
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61px;
+  margin: 0.5rem 0;
+}
+
+.subscribeSection > p {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  text-align: center;
+  font-family: Archivo;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.subscribeSection > form {
+  padding: 80px 167px;
+  border-radius: 20px;
+  border: 1px solid var(--Gray-5, #e0e0e0);
+  background: var(--foundation-primary-p-50, #fbfaff);
+}
+
+.subscribeSection > form > input {
+  padding: 15px 27px;
+  color: var(--foundation-grey-g-600, #515151);
+  font-family: Archivo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--foundation-primary-p-200, #eeebfe);
+  background: #fff;
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+.subscribeButtonSection > button {
+  background: var(--foundation-primary-p-700, #664efe);
+  margin-top: 40px;
+  width: 100%;
+}
+
+.subscribeButtonSection {
+  width: 100%;
+}
+
 @media screen and (max-width: 1023px) {
   header {
     height: 49px;
@@ -427,5 +494,43 @@ header > svg:last-child {
   .countdown > div > p:nth-child(2) {
     font-size: 14px;
     line-height: 23px;
+  }
+
+  .subscribeSection {
+    padding: 80px 16px;
+  }
+
+  .subscribeSection > h4 {
+    font-size: 31px;
+    line-height: 40px;
+  }
+
+  .subscribeSection > p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .subscribeSection > form {
+    padding: 50px 16px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .subscribeSection > form > input {
+    padding: 14px 20px;
+    color: var(--foundation-grey-g-600, #515151);
+    font-size: 14px;
+    line-height: 23px;
+    margin: 10px 0;
+  }
+
+  .subscribeButtonSection > button {
+    background: var(--foundation-primary-p-700, #664efe);
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .subscribeButtonSection {
+    width: 100%;
   }
 }
