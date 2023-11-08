@@ -463,6 +463,252 @@ footer > div:last-child {
   display: flex;
   align-items: center;
   gap: 130px;
+  border: 2px solid green;
+  padding: 56px 80px;
+  background: rgba(102, 78, 254, 0.98);
+}
+
+.ebookHero > div {
+  flex-basis: 50%;
+}
+
+.ebookHero > div > p {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 0 20px;
+  background: var(--foundation-primary-p-800, #4e34fe);
+  margin: 0;
+}
+
+.ebookHero > div > h4 {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 61px;
+  padding: 10px 20px;
+  background: var(--logo-black, #011627);
+  margin: 0;
+}
+
+.ebookHero > div > button,
+.rightSection > form > button {
+  margin-top: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--logo-black, #011627);
+  background: var(--foundation-tertiary-t-600, #ffd029);
+  color: var(--logo-black, #011627);
+}
+
+.whatsInside {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 56px 80px;
+}
+
+.whatsInside > div {
+  flex-basis: 50%;
+}
+
+.leftSection > h4 {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  margin: 0 0 0.5rem 0;
+}
+
+.leftSection > p {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+
+.rightSection {
+  border-radius: 10px;
+  border: 5px solid var(--logo-black, #011627);
+  background: var(--white-body-text, #fff);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.rightSection > div:nth-child(1) {
+  width: 100%;
+  min-height: 406px;
+  position: absolute;
+  border-radius: 10px;
+  background: var(--logo-black, #011627);
+  z-index: -1;
+  left: -20px;
+  bottom: -20px;
+}
+
+.rightSection > div:nth-child(2) {
+  padding: 24px 40px;
+  background: #2ba792;
+}
+
+.rightSection > div:nth-child(2) > h4 {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  margin: 0;
+}
+
+.rightSection > div:nth-child(2) > p {
+  color: var(--white-body-text, #fff);
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+
+.rightSection > form {
+  padding: 40px;
+}
+
+.rightSection form > div {
+  margin-bottom: 24px;
+}
+
+.rightSection > form > div > label {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.rightSection > form > div > input {
+  width: 100%;
+  height: 60px;
+  font-family: Archivo;
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  padding: 1rem;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+
+  border-radius: 5px;
+  border: 1px solid var(--foundation-grey-g-500, #737373);
+}
+
+.rightSection > form > div > input::placeholder {
+  color: var(--foundation-grey-g-500, #737373);
+}
+
+.rightSection > form > div > input:focus {
+  outline: none;
+}
+
+.whatsInsideList {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+.whatsInsideList > li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: -40px;
+  margin-bottom: 1rem;
+}
+
+.whatsInsideList > li > span:nth-child(1) {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #664efe;
+  border-radius: 50%;
+}
+
+.whatsInsideList > li > p:nth-child(2) {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.modalInner {
+  width: 70%;
+  padding: 80px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.modalInner > h4 {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  text-align: center;
+  font-family: Archivo;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+  margin: 1rem 0;
+}
+
+.modalInner > p {
+  color: var(--foundation-grey-g-900, #2e2e2e);
+  font-family: Archivo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+
+.modalInner > p > span {
+  font-weight: 500;
+}
+
+.modalInner > button {
+  background: var(--foundation-primary-p-700, #664efe);
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -671,5 +917,101 @@ footer > div:last-child {
 
   footer > div:last-child {
     gap: 24px;
+  }
+
+  .ebookHero {
+    gap: 40px;
+    padding: 40px 1rem;
+    flex-direction: column;
+  }
+
+  .ebookHero > div {
+    flex-basis: 100%;
+  }
+
+  .ebookHero > img {
+    flex-basis: 100%;
+  }
+
+  .ebookHero > div > p {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 1rem;
+  }
+
+  .ebookHero > div > h4 {
+    line-height: 40px;
+    padding: 1rem;
+    font-size: 31px;
+  }
+
+  .whatsInside {
+    gap: 40px;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .whatsInside > div {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .leftSection > h4 {
+    font-size: 31px;
+    line-height: 40px;
+  }
+
+  .leftSection > p {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .rightSection > div:nth-child(1) {
+    display: none;
+  }
+
+  .rightSection > div:nth-child(2) {
+    padding: 1rem;
+  }
+
+  .rightSection > div:nth-child(2) > h4 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .rightSection > div:nth-child(2) > p {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .rightSection > form {
+    padding: 1rem;
+  }
+
+  .rightSection > form > div > label {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .rightSection > form > div > input {
+    height: 50px;
+    padding: 1rem;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  .whatsInsideList {
+    margin-top: 1rem;
+  }
+
+  .whatsInsideList > li {
+    gap: 0.5rem;
+  }
+
+  .whatsInsideList > li > p:nth-child(2) {
+    font-size: 14px;
+    line-height: 23px;
   }
 }

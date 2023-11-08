@@ -99,7 +99,7 @@
         </div>
       </div>
     </header>
-    
+
     <section class="ebookHero">
       <div>
         <p>
@@ -112,6 +112,56 @@
       </div>
       <img src="./assets/ebook.svg" alt="Ise E book" />
     </section>
+    <section class="whatsInside">
+      <div class="leftSection">
+        <h4>What’s inside?</h4>
+        <p>
+          In this insightful guide, you'll uncover the cutting-edge tech skills
+          that are shaping the future of work. Whether you're a seasoned pro or
+          just starting your tech journey, these skills will set you on the path
+          to financial growth and professional success.
+        </p>
+        <ul class="whatsInsideList"></ul>
+      </div>
+      <div class="rightSection">
+        <div></div>
+        <div>
+          <h4>Get instant access</h4>
+          <p>We will send the ebook automatically to your mail</p>
+        </div>
+        <form onsubmit="displayModal()">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your first name" />
+          </div>
+
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" id="email" placeholder="name@gmail.com" />
+          </div>
+
+          <button
+            onclick="displayModal(event)"
+            type="submit"
+            id="submitEbookForm"
+          >
+            Grab FREE Ebook
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div class="modal">
+      <div class="modalInner">
+        <h4>Congratulations</h4>
+        <p>
+          Your FREE ebook has been sent to your email and you've joined our
+          waitlist! Be rest assured that you have secured a 10% Early bird
+          discount once we LAUNCH.
+        </p>
+        <button onclick="removeModal()">Continue</button>
+      </div>
+    </div>
 
     <footer>
       <div>
@@ -174,5 +224,7 @@
         </svg>
       </div>
     </footer>
+
+    <script src="./ebook.js"></script>
   </body>
 </html>
