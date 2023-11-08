@@ -459,6 +459,12 @@ footer > div:last-child {
   gap: 40px;
 }
 
+.ebookHero {
+  display: flex;
+  align-items: center;
+  gap: 130px;
+}
+
 @media screen and (max-width: 1023px) {
   header {
     height: 49px;
