@@ -3,17 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="./assets/iseWhite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>
+      iṣẹ́ | A platform for cross-generational Africans, access to education,
+      employment and talent
+    </title>
+    <meta
+      name="description"
+      content="iṣẹ́ | A platform for cross-generational Africans, access to education, employment and talent"
+    />
     <link rel="stylesheet" href="styles.css" />
-
-    <title>Grab our Ebook!</title>
   </head>
   <body>
     <header>
       <div>
-        <a href="#0">About</a>
-        <a href="#0">Programs</a>
+        <a href="#0" onclick="scrollIntoTheView('.whyYouShouldContainer')"
+          >About</a
+        >
+        <a href="#0" onclick="scrollIntoTheView('.programmesInIse')"
+          >Programs</a
+        >
         <button>Join our tribe</button>
       </div>
       <img src="./assets/iseLogo.svg" alt="Ise Logo" />
@@ -64,6 +74,7 @@
         viewBox="0 0 24 25"
         fill="none"
         onclick="openSideNav()"
+        class="openSideNav"
       >
         <path
           d="M4 6.5H20M4 12.5H20M4 18.5H20"
@@ -100,68 +111,61 @@
       </div>
     </header>
 
-    <section class="ebookHero">
-      <div>
-        <p>
-          Discover the key to success in the new economy with our FREE ebook:
-        </p>
-        <h4>
-          "2024's Income Boosters: 7 Essential Tech Skills of the New Economy."
-        </h4>
-        <button>Grab FREE Ebook</button>
+    <section class="heroSection">
+      <div class="filterOverlay"></div>
+      <div class="heroSectionMain">
+        <h4>Kickstart your Tech Career in 16Weeks with iṣẹ́ EdTech</h4>
+        <button>Join our tribe</button>
       </div>
-      <img src="./assets/ebook.svg" alt="Ise E book" />
     </section>
-    <section class="whatsInside">
-      <div class="leftSection">
-        <h4>What’s inside?</h4>
-        <p>
-          In this insightful guide, you'll uncover the cutting-edge tech skills
-          that are shaping the future of work. Whether you're a seasoned pro or
-          just starting your tech journey, these skills will set you on the path
-          to financial growth and professional success.
-        </p>
-        <ul class="whatsInsideList"></ul>
-      </div>
-      <div class="rightSection">
-        <div></div>
+
+    <section class="whyYouShouldContainer">
+      <h1>Why you should learn 21st century tech skills with iṣẹ́</h1>
+      <div class="whyYouShouldOptions"></div>
+    </section>
+
+    <section class="programmesInIse">
+      <h4>Programs in iṣẹ́ EdTech</h4>
+      <div class="programmesInIseOptions"></div>
+    </section>
+
+    <section class="countAdownContainer">
+      <h5>Countdown to Launch</h5>
+      <div class="countdown">
         <div>
-          <h4>Get instant access</h4>
-          <p>We will send the ebook automatically to your mail</p>
+          <h2></h2>
+          <p>Days</p>
         </div>
-        <form onsubmit="displayModal()">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your first name" />
-          </div>
-
-          <div>
-            <label for="email">Email *</label>
-            <input type="email" id="email" placeholder="name@gmail.com" />
-          </div>
-
-          <button
-            onclick="displayModal(event)"
-            type="submit"
-            id="submitEbookForm"
-          >
-            Grab FREE Ebook
-          </button>
-        </form>
+        <div>:</div>
+        <div>
+          <h2>87</h2>
+          <p>Hours</p>
+        </div>
+        <div>:</div>
+        <div>
+          <h2>87</h2>
+          <p>Minutes</p>
+        </div>
+        <div>:</div>
+        <div>
+          <h2>87</h2>
+          <p>Seconds</p>
+        </div>
       </div>
     </section>
 
-    <div class="modal">
-      <div class="modalInner">
-        <h4>Congratulations</h4>
-        <p>
-          Your FREE ebook has been sent to your email and you've joined our
-          waitlist! Be rest assured that you have secured a 10% Early bird
-          discount once we LAUNCH.
-        </p>
-        <button onclick="removeModal()">Continue</button>
-      </div>
-    </div>
+    <section class="subscribeSection">
+      <h4>Join our vibrant tech enthusiast community</h4>
+      <p>Be the first to know about our launch!</p>
+
+      <form>
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email Address" />
+        <div class="subscribeButtonSection">
+          <button>Join our community</button>
+        </div>
+      </form>
+    </section>
 
     <footer>
       <div>
@@ -225,6 +229,6 @@
       </div>
     </footer>
 
-    <script src="./ebook.js"></script>
+    <script src="./aboutIse.js"></script>
   </body>
 </html>

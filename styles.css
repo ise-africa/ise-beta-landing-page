@@ -57,7 +57,7 @@ header > div:nth-child(1) > button,
   background: var(--foundation-primary-p-700, #664efe);
 }
 
-header > svg:nth-child(4) {
+.openSideNav {
   display: none;
 }
 
@@ -308,7 +308,7 @@ header > svg:nth-child(4) {
 
 .countdown {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 80px;
   margin-top: 2rem;
@@ -547,7 +547,7 @@ footer > div:last-child {
 
 .rightSection > div:nth-child(1) {
   width: 100%;
-  min-height: 406px;
+  min-height: 496px;
   position: absolute;
   border-radius: 10px;
   background: var(--logo-black, #011627);
@@ -661,13 +661,14 @@ footer > div:last-child {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.4);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   display: none;
+  z-index: 5;
 }
 
 .active {
@@ -727,7 +728,7 @@ footer > div:last-child {
     display: none;
   }
 
-  header > svg:nth-child(4) {
+  .openSideNav {
     display: block;
   }
 

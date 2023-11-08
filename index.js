@@ -27,8 +27,8 @@ function displayModal(event) {
 }
 
 function removeModal() {
-  event.preventDefault();
-
   const modal = document.querySelector(".modal");
   modal.classList.remove("active");
+
+  window.location.href = "/aboutIse.html";
 }

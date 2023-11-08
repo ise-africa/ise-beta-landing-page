@@ -149,4 +149,12 @@ const startTimer = () => {
 
 startTimer();
 
-console.log(countdown);
+const scrollIntoTheView = (classname) => {
+  const section = document.querySelector(classname);
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+};
