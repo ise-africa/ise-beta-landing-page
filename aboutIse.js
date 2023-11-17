@@ -162,3 +162,7 @@ const scrollIntoTheView = (classname) => {
 const openWhatsappGroup = () => {
   window.open("https://chat.whatsapp.com/H14J1utsxOW71Yh7bomJB2");
 };
+
+const openLink = (link) => {
+  window.open(link);
+};

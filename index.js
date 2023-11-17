@@ -31,7 +31,7 @@ function removeModal() {
   window.location.href = "/aboutIse.html";
 }
 
-const submitForm = (event) => {
+const submitForm = async (event) => {
   event.preventDefault();
 
   document.getElementById("submitEbookFormButton").innerText = "Loading...";
@@ -44,28 +44,17 @@ const submitForm = (event) => {
   const fetchUrl =
     "https://ise-backend-production.up.railway.app/api/ise/v1/marketing/e-book";
 
-  fetch(fetchUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formRequestBody),
-  })
-    .then((res) => {
-      if (!res.ok) {
-        document.getElementById("errortext").style.display = "block";
-        throw new Error(`HTTP error! Status: ${res.status}`);
-      }
+  await axios
+    .post(fetchUrl, formRequestBody)
+    .then(() => {
       displayModal();
       document.getElementById("submitEbookFormButton").innerText =
         "Grab FREE Ebook";
     })
     .catch((err) => {
-      if (err.response) {
-        err.response.json().then((jsonError) => {});
-      } else {
-        console.error("Fetch error:", err.message);
-      }
+      document.getElementById("errortext").style.display = "block";
+      document.getElementById("errortext").innerHTML =
+        err.response?.data?.error?.responseMessage;
 
       document.getElementById("submitEbookFormButton").innerText =
         "Grab FREE Ebook";
@@ -73,3 +62,13 @@ const submitForm = (event) => {
 };
 
 document.getElementById("marketingForm").addEventListener("submit", submitForm);
+
+const scrollIntoTheView = (classname) => {
+  const section = document.querySelector(classname);
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+};
