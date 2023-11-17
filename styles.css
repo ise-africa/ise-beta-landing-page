@@ -712,6 +712,11 @@ footer > div:last-child {
   margin-top: 40px;
 }
 
+#errortext {
+  display: none;
+  color: red;
+}
+
 @media screen and (max-width: 1023px) {
   header {
     height: 49px;

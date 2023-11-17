@@ -86,22 +86,30 @@
           <h4>Get instant access</h4>
           <p>We will send the ebook automatically to your mail</p>
         </div>
-        <form onsubmit="displayModal()">
+        <form id="marketingForm">
           <div>
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your first name" />
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your first name"
+              id="firstnameInput"
+            />
           </div>
 
           <div>
             <label for="email">Email *</label>
-            <input type="email" id="email" placeholder="name@gmail.com" />
+            <input
+              type="email"
+              id="email"
+              placeholder="name@gmail.com"
+              id="emailInput"
+            />
           </div>
 
-          <button
-            onclick="displayModal(event)"
-            type="submit"
-            id="submitEbookForm"
-          >
+          <p id="errortext">There was an error, please try again.</p>
+
+          <button type="submit" id="submitEbookFormButton">
             Grab FREE Ebook
           </button>
         </form>

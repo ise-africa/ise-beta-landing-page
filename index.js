@@ -19,9 +19,7 @@ const whatsInsideListItems = whatsInside
 
 document.querySelector(".whatsInsideList").innerHTML = whatsInsideListItems;
 
-function displayModal(event) {
-  event.preventDefault();
-
+function displayModal() {
   const modal = document.querySelector(".modal");
   modal.classList.add("active");
 }
@@ -32,3 +30,46 @@ function removeModal() {
 
   window.location.href = "/aboutIse.html";
 }
+
+const submitForm = (event) => {
+  event.preventDefault();
+
+  document.getElementById("submitEbookFormButton").innerText = "Loading...";
+
+  const formRequestBody = {
+    name: document.querySelector("form > div:nth-child(1) > input").value,
+    email: document.querySelector("form > div:nth-child(2) > input").value,
+  };
+
+  const fetchUrl =
+    "https://ise-backend-production.up.railway.app/api/ise/v1/marketing/e-book";
+
+  fetch(fetchUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formRequestBody),
+  })
+    .then((res) => {
+      if (!res.ok) {
+        document.getElementById("errortext").style.display = "block";
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      displayModal();
+      document.getElementById("submitEbookFormButton").innerText =
+        "Grab FREE Ebook";
+    })
+    .catch((err) => {
+      if (err.response) {
+        err.response.json().then((jsonError) => {});
+      } else {
+        console.error("Fetch error:", err.message);
+      }
+
+      document.getElementById("submitEbookFormButton").innerText =
+        "Grab FREE Ebook";
+    });
+};
+
+document.getElementById("marketingForm").addEventListener("submit", submitForm);
