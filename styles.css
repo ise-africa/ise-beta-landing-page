@@ -734,7 +734,7 @@ footer > div:last-child {
   }
 
   .openSideNav {
-    display: block;
+    display: none;
   }
 
   .heroSectionMain > h4 {
@@ -1019,5 +1019,16 @@ footer > div:last-child {
   .whatsInsideList > li > p:nth-child(2) {
     font-size: 14px;
     line-height: 23px;
+  }
+
+  .modalInner {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .modalInner > h4 {
+    font-size: 30px;
+    line-height: 140%;
+    margin: 0.5rem 0;
   }
 }
