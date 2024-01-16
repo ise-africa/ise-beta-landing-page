@@ -128,7 +128,7 @@ function countdownToLaunch(targetDate) {
   return { days: days, hours: hours, minutes, minutes, seconds: seconds };
 }
 
-const launchDate = new Date("2023-12-20T00:00:00").getTime();
+const launchDate = new Date("2024-03-01T00:00:00").getTime();
 const countdown = countdownToLaunch(launchDate);
 
 const daysDiv = document.querySelector(".countdown > div:nth-child(1) > h2");
