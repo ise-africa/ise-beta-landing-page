@@ -46,7 +46,7 @@ const submitForm = async (event) => {
 
   await axios
     .post(fetchUrl, formRequestBody)
-    .then(() => {
+    .then((res) => {
       displayModal();
       document.getElementById("submitEbookFormButton").innerText =
         "Grab FREE Ebook";
